@@ -44,6 +44,33 @@ DataFrames, cleaning, filtering, grouping.
 NOTE: WIP
 Linear regression, classification, model evaluation.
 
+#### Classification
+
+This notebook demonstrates how changing the classification threshold affects model predictions and evaluation metrics. It uses synthetic probability data to show how a classifier’s behavior shifts as the threshold moves between 0 and 1.
+
+🔍 What this notebook covers?
+
+- How probability outputs convert into positive/negative predictions
+- How the confusion matrix changes with threshold
+- How evaluation metrics respond:
+- Accuracy – overall correctness
+- Precision – correctness of positive predictions
+- Recall (TPR) – ability to detect actual positives
+- F1‑Score – balance between precision and recall
+
+🎛 Interactive Visualization
+
+- An interactive slider (powered by `ipywidgets`) updates: Predicted labels, Confusion matrix, All evaluation metrics
+- This makes it easy to see the trade‑offs between false positives, false negatives, and overall model performance.
+
+🎯 Recommended Threshold
+
+- There is no universal “best” threshold
+- The ideal value depends on the problem:
+- High precision → use a higher threshold
+- High recall → use a lower threshold
+- Balanced performance → optimize using ROC or PR curves
+
 ### 07 — GenAI
 
 NOTE: WIP
@@ -91,7 +118,8 @@ python-ml-ai-learning-lab/
 │
 ├── 06_machine_learning/
 │   ├── linear_regression.ipynb
-│   ├── classification_basics.ipynb
+│   └── 02_classification_threshold_confuse_matrix
+|        ├── class_threshold_matrix.ipynb
 │
 ├── 07_genai/
 │   ├── text_generation.ipynb
